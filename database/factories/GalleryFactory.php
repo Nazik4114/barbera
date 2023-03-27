@@ -16,8 +16,9 @@ class GalleryFactory extends Factory
      */
     public function definition()
     {
+
         return [
-            //
+
         ];
     }
 }

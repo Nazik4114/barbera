@@ -49,6 +49,7 @@
                     <div class="form__row">
                         <h3 class="form__row-title">Оберіть послугу</h3>
                         <div class="form__radio-container">
+
                             <div class="form__radio-wrap">
                                 <label class="form__radio">Чоловіча стрижка
                                     <input type="radio" name="radio" value="radio-1">

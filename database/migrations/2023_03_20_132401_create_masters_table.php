@@ -15,8 +15,17 @@ return new class extends Migration
     {
         Schema::create('masters', function (Blueprint $table) {
             $table->id();
+            $table->text('name');
+            $table->string('image');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
+
+        Schema::create('master_service', function(Blueprint $table){
+            $table->foreignIdFor(\App\Models\Master::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(\App\Models\Service::class)->constrained()->cascadeOnDelete();
+        });
+
     }
 
     /**
@@ -27,5 +36,7 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('masters');
+        Schema::dropIfExists('master_service');
+
     }
 };
